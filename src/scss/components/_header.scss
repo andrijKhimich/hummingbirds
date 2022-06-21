@@ -1,12 +1,19 @@
+.header {
+  padding: 20px 0;
+  font-family: 'Poppins'sans-serif;
+  line-height: 1.571em;
+
+  &__social {
+    margin: 5px 5px 0 0;
+  }
+}
+
 .header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.logo {
-  max-width: 100px;
-  display: inline-block;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .nav {
@@ -17,7 +24,7 @@
     &__item,
     li {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 2px;
       }
     }
 
@@ -26,4 +33,24 @@
       padding: 10px 15px;
     }
   }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+
+  &__link {
+    padding: 5px;
+  }
+}
+
+.burger {
+  display: none;
 }

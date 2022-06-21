@@ -11,9 +11,10 @@ html {
 
 body {
   margin: 0; // Remove the margin in all browsers.
-  font-size: 16px;
-  // font-family: $font-secondary;
-  // color: $white;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: $white;
+  background-color: $primary;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -54,48 +55,28 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
-  // font-family: $font-primary;
+  font-family: 'Fun Comics';
 }
 
 h1 {
   text-transform: uppercase;
-  font-size: 100px;
-  line-height: .8em;
-  letter-spacing: 1px;
-  // color: $gray;
-
-  @include d(1299) {
-    font-size: 90px;
-  }
-
-  @include d(1199) {
-    font-size: 80px;
-  }
-
-  @include d(768) {
-    font-size: 70px;
-  }
-
-  @include d(575) {
-    font-size: 60px;
-  }
-
-  @include d(340) {
-    font-size: 50px;
-  }
+  font-size: 88px;
+  line-height: 0.955em;
 }
 
 h2 {
-  line-height: 1em;
+  font-size: 56px;
+  line-height: 1.143em;
 }
 
 h3 {
-  line-height: 1em;
+  font-size: 40px;
+  line-height: 1.200em;
 }
 
 h4 {
-  font-size: 40px;
-  line-height: 1em;
+  font-size: 28px;
+  line-height: 1.143em;
 }
 
 h5 {
@@ -106,7 +87,6 @@ h5 {
 h6 {
   font-size: 16px;
   line-height: 1em;
-
 }
 
 hr {
@@ -313,12 +293,6 @@ p,
 li {
   line-height: 1.5em;
   margin: 0;
-  font-size: 18px;
-  color: $black;
-
-  @include d(768) {
-    font-size: 16px;
-  }
 }
 
 ul,
@@ -430,26 +404,14 @@ input {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1245px;
   margin: 0 auto;
   padding: 0 15px;
 
-  &_lg {
-    max-width: 1440px;
-    padding: 0 15px;
+  &_sm {
+    max-width: 1140px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
-
-    @include d(1300) {
-      max-width: 95%;
-      padding: 0;
-    }
-
-    @include d(767) {
-      max-width: 100%;
-      padding: 0 30px;
-    }
+    padding: 0 15px;
   }
 }
 
@@ -469,24 +431,6 @@ main {
   @extend h1;
 }
 
-.title-2 {
-  @extend h2;
-  font-size: 90px;
-  line-height: 1.125em;
-
-  @include d(1399) {
-    font-size: 80px;
-  }
-
-  @include d(991) {
-    font-size: 60px;
-  }
-
-  @include d(575) {
-    font-size: 54px;
-  }
-}
-
 .title-3 {
   @extend h3;
   font-size: 50px;
@@ -504,3 +448,8 @@ main {
   @extend h6;
 }
 
+.svg-social {
+  width: 24px;
+  height: 24px;
+  fill: $white;
+}
