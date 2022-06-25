@@ -2,9 +2,45 @@
   padding: 20px 0;
   font-family: 'Poppins'sans-serif;
   line-height: 1.571em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 
   &__social {
     margin: 5px 5px 0 0;
+  }
+
+  &__nav {
+    @include d(991) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $primary;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity .5s ease-out, transform .5s ease-out;
+
+      &.active {
+        opacity: 1;
+        pointer-events: initial;
+        transform: translateX(0);
+
+      }
+
+      .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 90px 0 0 22px;
+        justify-content: flex-start;
+        font-size: 18px;
+      }
+    }
+
   }
 }
 
@@ -20,6 +56,7 @@
   &-list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     &__item,
     li {
@@ -43,6 +80,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 7px;
+
+      @include d(991) {
+        right: 0;
+      }
     }
   }
 
@@ -52,5 +93,52 @@
 }
 
 .burger {
+  position: relative;
+  width: 22px;
+  height: 16px;
+  z-index: 101;
+  left: 22px;
   display: none;
+  @include d(991) {
+    display: inline-block;
+  }
+  &_item {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: $white;
+    left: 0;
+    transition: .5s ease-out;
+    
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      margin-top: -1px;
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    .burger_item {
+      &:first-child {
+        transform: rotate(45deg);
+        top: 7px;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+        bottom: 7px;
+      }
+    }
+  }
 }

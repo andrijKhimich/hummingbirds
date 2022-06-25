@@ -1,0 +1,45 @@
+.footer {
+  background-color: #25134F;
+  padding: 32px 0 10px;
+
+  &__logo {
+    max-width: 246px;
+    margin-bottom: 60px;
+
+    @include d(991) {
+      margin-bottom: 20px;
+      max-width: 160px;
+    }
+  }
+
+  .svg-social {
+    width: 26px;
+    height: 26px;
+  }
+
+  &__nav {
+    margin-left: -10px;
+
+    .nav-list {
+      justify-content: flex-end;
+
+      @include d(991) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__social {
+    justify-content: flex-end;
+
+    @include d(991) {
+      margin: 20px 0;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  margin-top: 5px;
+}

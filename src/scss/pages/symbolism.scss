@@ -1,0 +1,12 @@
+.symbolism {
+  padding: 150px 0 120px;
+
+  @include d(767) {
+    padding: 100px 0;
+  }
+
+  &__title {
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+}

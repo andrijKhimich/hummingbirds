@@ -3,8 +3,8 @@
 
 // libs using in project, uncomment what you need
 // @import "../../node_modules/normalize.css/normalize.css";
-// @import "../../node_modules/bootstrap-4-grid/css/grid.min.css";
-
+@import "../../node_modules/bootstrap-4-grid/css/grid.min.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
 // @import "../../node_modules/odometer/sass/odometer-theme-default"
 // @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
 
@@ -28,3 +28,6 @@
 
 // project pages
 @import "pages/index";
+@import "pages/thank";
+@import "pages/symbolism";
+
