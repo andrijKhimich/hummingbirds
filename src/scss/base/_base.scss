@@ -554,7 +554,16 @@ main {
   width: 14px;
   height: 14px;
 }
-
+.svg-remove {
+  width: 24px;
+  height: 24px;
+  fill: #42228C;
+  padding: 6px;
+  margin-left: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+}
 .btn {
   display: inline-block;
   padding: 0;
@@ -567,7 +576,7 @@ main {
   font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
-
+  padding: 0 20px;
   &_lg {
     line-height: 64px;
     height: 64px;

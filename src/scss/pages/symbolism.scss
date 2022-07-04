@@ -1,5 +1,15 @@
-.symbolism {
+.constructor {
   padding: 150px 0 120px;
+
+  &-bg {
+    object-fit: cover;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    height: auto;
+    opacity: .1;
+    z-index: -1;
+  }
 
   @include d(767) {
     padding: 100px 0;
@@ -7,6 +17,220 @@
 
   &__title {
     max-width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
+    text-align: center;
   }
+
+  &__header {
+    max-width: 814px;
+    padding: 34px 39px;
+    background-color: #412288;
+    border-radius: 40px;
+    margin-bottom: 56px;
+
+  }
+
+  &__bg {
+    width: 100%;
+    height: 587px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__description {
+    max-width: 265px;
+    position: relative;
+    margin-bottom: 12px;
+    // &::before {
+    //   content: "";
+    //   width: 100%;
+    //   height: 104px;
+    //   background: linear-gradient(180deg, rgba(93, 45, 199, 0) 0%, #592DBD 58.51%);
+    //   border-radius: 20px;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   z-index: 1;
+    // }
+  }
+
+  &__tags {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__tabs {
+    background: rgba(65, 34, 136, 0.7);
+    border-radius: 40px;
+    padding: 37px 48px;
+  }
+
+  &__item {
+    height: 195px;
+    max-width: 25%;
+    overflow: hidden;
+    padding: 0 8px;
+    margin-bottom: 16px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.tag {
+  background-color: $pink;
+  padding: 10px 15px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary;
+  line-height: 20px;
+  font-weight: 500;
+
+  &_delete {
+    background-color: $white;
+    font-weight: 600;
+    min-width: 142px;
+    text-align: center;
+
+    .svg-remove {
+      display: none;
+    }
+  }
+
+}
+
+.description {
+  max-height: 655px;
+  overflow-y: auto;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(253, 234, 255, 0.54);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(253, 234, 255, 0.54);
+
+  }
+
+  &__item {
+    padding: 16px;
+    background: rgba(65, 34, 136, 0.9);
+    border-radius: 24px;
+    margin-bottom: 16px;
+    margin-right: 8px;
+
+    @include d(992) {
+      margin-bottom: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(241, 164, 250, 0.25);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__link {
+    color: $white;
+    padding: 0 5px 20px 5px;
+    line-height: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 4px;
+      background-color: #F1A4FA;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &.active {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__content {
+    animation: fadeEffect .5s;
+    display: none;
+    align-items: center;
+    padding-top: 24px;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+  }
+
+}
+
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#facepaint img, #necklaces img, #tattoo img {
+  transform: scale(3);
+  position: relative;
+  left: -20%;
+}
+#tattoo img {
+  left: -50%;
 }
