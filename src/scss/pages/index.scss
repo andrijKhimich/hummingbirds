@@ -10,7 +10,7 @@
     width: 100%;
     top: 0;
 
-    @include d(992) {
+    @include d(991) {
       height: 100%;
 
       img {
@@ -313,6 +313,7 @@
 
 .report {
   margin: 220px 0 0 0;
+  position: relative;
 
   @include d(991) {
     margin: 100px 0 0 0;
@@ -326,7 +327,7 @@
 
   &-bg {
     position: absolute;
-    top: 67%;
+    top: 38%;
     left: 0;
     transform: translate(0, -50%);
     object-fit: cover;
@@ -352,6 +353,61 @@
     p {
       &:last-of-type {
         margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 735px;
+    z-index: 1;
+    width: 50%;
+
+    @include d(991) {
+      position: relative;
+      margin: 60px auto 0 auto;
+    }
+
+    @include d(640) {
+      display: none;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    right: 16%;
+    color: $black;
+
+    @include d(1280) {
+      bottom: 7%;
+    }
+
+    @include d(991) {
+      right: 14%;
+    }
+
+    @include d(768) {
+      right: 12%;
+    }
+
+    span {
+      font-family: 'Fun Comics';
+      font-size: 100px;
+
+      @include d(1280) {
+        font-size: 80px;
+      }
+
+      @include d(991) {
+        font-size: 60px;
+      }
+
+      @include d(768) {
+        font-size: 40px;
       }
     }
   }
